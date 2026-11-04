@@ -1,0 +1,6 @@
+{
+  "version": "1.6",
+  "minVersion": "1.0",
+  "url": "https://gitee.com/lzp1314/answerlock/raw/master/answerlock-v1.6.apk",
+  "note": "新增联网更新检查：启动时自动比对版本，设置页可手动检查"
+}
