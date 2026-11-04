@@ -1,0 +1,6 @@
+{
+  "version": "1.7",
+  "minVersion": "1.0",
+  "url": "https://gitee.com/lzp-zl/answerlock/raw/master/answerlock-v1.7.apk",
+  "note": "1) 修复点「检查更新」没反应：改为弹窗明确告知已最新/有新版本/失败原因；2) 新增后台守护服务，退出应用或被系统清理后自动回来，并把被关掉的无障碍服务重新打开；3) 有 adb 权限时可自愈，无需手动再授权；4) 开机、覆盖安装后自动拉起守护"
+}
