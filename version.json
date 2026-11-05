@@ -1,6 +1,6 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "minVersion": "1.0",
-  "url": "https://gitee.com/lzp-zl/answerlock/raw/master/answerlock-v2.0.apk",
-  "note": "1) 手机装同一个包，设置页点「控制电视」就能自动搜到家里的电视，点一下直接改年级、科目、观看时间，不用再扫码；2) 界面跟随系统深浅色；3) 题库含国情、近代史、抗战与英雄人物；4) 局域网内工作，改设置必须过家长密码"
+  "url": "https://gitee.com/lzp-zl/answerlock/raw/master/answerlock-v2.1.apk",
+  "note": "1) 设置页按钮改名：改密码→修改密码，控制电视→控制电视端，手机扫码→扫码控制；2) 新增每周自动检查更新，查到新版本会在通知栏提醒，点一下直接下载；3) 不想自动查的话，设置页点「自动检查已开」就能关掉；4) 其他功能和题库都没动"
 }
