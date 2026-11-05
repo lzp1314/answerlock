@@ -1,0 +1,33 @@
+name: 从 Gitee 同步
+
+# 每小时? 不，每 6 小时一次，也可以在 GitHub 页面手动点 Run workflow
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 从 Gitee 拉取并覆盖
+        run: |
+          git config user.name "answerlock-sync"
+          git config user.email "answerlock-sync@users.noreply.github.com"
+          git remote add gitee https://gitee.com/lzp-zl/answerlock.git
+          git fetch gitee master
+          if git diff --quiet HEAD gitee/master; then
+            echo "Gitee 上没有新内容，本次跳过。"
+            exit 0
+          fi
+          git reset --hard gitee/master
+          git push origin master --force
+          echo "已同步到 $(git rev-parse --short HEAD)"
